@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SecureCommunication"
+        tools:targetApi="31">
+        <activity
+            android:name="secure.sms.code.main"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SecureCommunication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="secure.sms.code.send_sms" android:exported="true"/>
+        <activity android:name="secure.sms.code.passwd_change" android:exported="true"/>>
+        <activity android:name="secure.sms.code.display_sender" android:exported="true"/>
+        <activity android:name="secure.sms.code.sender_message" android:exported="true"/>
+        <activity android:name="secure.sms.code.show_message" android:exported="true"/>
+        <receiver android:name="secure.sms.code.receive_SMS"
+            android:exported="true"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_SMS">
+            <intent-filter android:priority="100000">
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name= "android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

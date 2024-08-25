@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Enter the phone number of recipient"
+        />     
+    <EditText 
+        android:id="@+id/Phone_No"  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"        
+        />
+    <TextView  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"         
+        android:text="Enter the message"
+        />
+    <EditText android:text="EditText" android:id="@+id/SMS_Message" android:gravity="top" android:layout_width="fill_parent" android:layout_height="125px"></EditText>
+    <Button android:id="@+id/Send_SMS" android:layout_width="fill_parent" android:text="Send SMS" android:layout_height="50dip"></Button>
+    <Button android:text="Key Exchange" android:id="@+id/Key_Exchange" android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+    <Button android:layout_height="wrap_content" android:id="@+id/See_Saved" android:text="See Saved Messages" android:layout_width="fill_parent"></Button> 
+</LinearLayout>
