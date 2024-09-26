@@ -30,6 +30,8 @@ The algorithm for the implementation of the project is as followed:
 
 #### Flow Chart
 
+![FlowChart](images/FlowChart_Secure_SMS.png)
+
 #### Snapshots
 
 
