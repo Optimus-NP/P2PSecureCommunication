@@ -34,6 +34,17 @@ The algorithm for the implementation of the project is as followed:
 
 #### Snapshots
 
+<div style="display: flex; justify-content: space-around;">
+
+  <img src="images/Snapshot_1.png" alt="Image 1" style="width: 30%;">
+  <img src="images/Snapshot_2.png" alt="Image 2" style="width: 30%;">
+  <img src="images/Snapshot_3.png" alt="Image 3" style="width: 30%;">
+
+</div>
+
+![Snapshot](images/Snapshot_1.png)
+![Snapshot](images/Snapshot_2.png)
+![Snapshot](images/Snapshot_3.png)
 
 ## Further Work
 The application can be further extended to do secure communication by means of calls also. That is if third party may tap the phone call then he/she may not understand the communication between the sender and receiver. Also, VOIP (Voice over Internet Protocol) can be done so that the messages are not being sent as sms, instead they are being sent through the socket where IP of the phone will be required.   
